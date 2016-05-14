@@ -1,0 +1,28 @@
+{% extends "mgmt/adminbase.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}FindUser{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>用户查询</h1>
+</div>
+    <div class="col-md-4">
+        {{ wtf.quick_form(form) }}
+
+    </br>
+        <table class="table table-bordered table-hover">
+        <tr>
+            <th>用户名</th>
+            <th>姓名</th>
+            <th>邮箱</th>
+        </tr>
+        {% for usero in userinfo %}
+        <tr>
+            <td>{{ usero.username }}</td>
+            <td>{{ usero.name }}</td>
+            <td>{{ usero.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+ {% block item %}
+     <li><a href="{{ url_for('mgmt.register') }}">添加账号</a></li>
+     <li><a href="{{ url_for('mgmt.mgmtChpasswd')}}">修改用户密码</a></li>
+     <li><a href="{{ url_for('mgmt.FindUser')}}">用户查询</a></li>
+ {% endblock %}
+

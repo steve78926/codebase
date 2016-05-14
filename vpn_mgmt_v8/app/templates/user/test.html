@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}chpass_sys_vpn{% endblock %}
+
+{% block page_content %}
+    <div class="page-header">
+    <h3>用户{{ current_user.username }}的VPN密码已经修改成功，请修改Windows系统VPN密码文件 </h3>
+    </div>
+    <div class="col-md-12">
+        <h3>如何在Windows系统修改VPN登录密码</h3>
+          <h4>
+              <p>基本步骤: </p>
+              <p> 1. VPN密码修改后，必须在windows系统里修改相对应的密码文件 </p>
+              <p> 2. 由于windows不允许普通用户修改C盘主要目录的文件，因此，必须先启用administrator </p>
+              <p> 3. 通过登录administrator来修改VPN的密码文件,修改后再禁用administrator</p>
+
+              如果您不知道具体步骤，请下载操作文档：<br><br>
+            win7用户下载文档<a href="{{ url_for('static',filename='doc/win7_vpn_chpass.docx')}}">点这里</a> <br>
+            win8用户下载文档<a href="{{ url_for('static',filename='doc/win8_vpn_chpass.docx')}}">点这里</a>
+          </h4>
+    </div>
+{% endblock %}

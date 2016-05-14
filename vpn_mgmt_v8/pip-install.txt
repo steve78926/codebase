@@ -1,0 +1,6 @@
+pip install flask
+pip install flask-bootstrap
+pip install flask-sqlalchemy
+pip install flask-login
+pip install flask-mysqldb
+pip install flask-script
